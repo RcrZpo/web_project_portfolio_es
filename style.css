@@ -75,7 +75,6 @@ html {
 
 body {
   margin: 0;
-
   background-color: #111111;
   color: #ffffff;
   font-family:
@@ -127,7 +126,9 @@ a {
 
 .hero__info h1 {
   margin: 0 0 15px;
-  font-family: "ArchivoBlack", sans-serif;
+  font-family:
+    "ArchivoBlack", "Inter-Regular", "Inter-bold", "Inter-medium",
+    "Italic-Noto-Serif", sans-serif;
   font-size: clamp(40px, 6vw, 64px);
   line-height: 0.95;
   min-width: 0;
