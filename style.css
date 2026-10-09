@@ -58,7 +58,7 @@
   font-style: medium;
 }
 @font-face {
-  font-family: "NotoSerif-italic";
+  font-family: "Italic-Noto-Serif";
   src:
     url(fonts/NotoSerif-Italic.woff) format("woff"),
     url(fonts/NotoSerif-Italic.woff2) format("woff2");
@@ -79,7 +79,7 @@ body {
   background-color: #111111;
   color: #ffffff;
   font-family:
-    "OpenSans", "NotoSerif-italic", "Inter-Regular", "Inter-bold",
+    "OpenSans", "Italic-Noto-Serif", "Inter-Regular", "Inter-bold",
     "Inter-medium", sans-serif;
 }
 
