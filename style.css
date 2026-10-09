@@ -78,7 +78,9 @@ body {
 
   background-color: #111111;
   color: #ffffff;
-  font-family: "OpenSans", sans-serif;
+  font-family:
+    "OpenSans", "NotoSerif-italic", "Inter-Regular", "Inter-Bold",
+    "Inter-Medium", sans-serif;
 }
 
 img {
