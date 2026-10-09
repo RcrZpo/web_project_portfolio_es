@@ -4,64 +4,64 @@
 @font-face {
   font-family: "ArchivoBlack";
   src:
-    url(fonts/fonts/ArchivoBlack-Regular.woff) format("woff"),
-    url(fonts/fonts/ArchivoBlack-Regular.woff2) format("woff2");
+    url(fonts/ArchivoBlack-Regular.woff) format("woff"),
+    url(fonts/ArchivoBlack-Regular.woff2) format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "OpenSans";
   src:
-    url(fonts/fonts/OpenSans-Regular.woff) format("woff"),
-    url(fonts/fonts/OpenSans-Regular.woff2) format("woff2");
+    url(fonts/OpenSans-Regular.woff) format("woff"),
+    url(fonts/OpenSans-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "OpenSans-SemiBold";
   src:
-    url(fonts/fonts/OpenSans-SemiBold.woff) format("woff"),
-    url(fonts/fonts/OpenSans-SemiBold.woff2) format("woff2");
+    url(fonts/OpenSans-SemiBold.woff) format("woff"),
+    url(fonts/OpenSans-SemiBold.woff2) format("woff2");
   font-weight: 500;
   font-style: semi-bold;
 }
 @font-face {
   font-family: "OpenSans-bold";
   src:
-    url(fonts/fonts/OpenSans-Bold.woff) format("woff"),
-    url(fonts/fonts/OpenSans-Bold.woff2) format("woff2");
+    url(fonts/OpenSans-Bold.woff) format("woff"),
+    url(fonts/OpenSans-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
   font-family: "Inter-Regular";
   src:
-    url(fonts/fonts/Inter-Regular.woff) format("woff"),
-    url(fonts/fonts/Inter-Regular.woff2) format("woff2");
+    url(fonts/Inter-Regular.woff) format("woff"),
+    url(fonts/Inter-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter-bold";
   src:
-    url(fonts/fonts/Inter-Bold.woff) format("woff"),
-    url(fonts/fonts/Inter-Bold.woff2) format("woff2");
+    url(fonts/Inter18pt-Bold.woff) format("woff"),
+    url(fonts/Inter18pt-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
   font-family: "Inter-medium";
   src:
-    url(fonts/fonts/Inter-Medium.woff) format("woff"),
-    url(fonts/fonts/Inter-Medium.woff2) format("woff2");
+    url(fonts/Inter18pt-Medium.woff) format("woff"),
+    url(fonts/Inter18pt-Medium.woff2) format("woff2");
   font-weight: 500;
   font-style: medium;
 }
 @font-face {
   font-family: "NotoSerif-italic";
   src:
-    url(fonts/fonts/NotoSerif-Italic.woff) format("woff"),
-    url(fonts/fonts/NotoSerif-Italic.woff2) format("woff2");
+    url(fonts/NotoSerif-Italic.woff) format("woff"),
+    url(fonts/NotoSerif-Italic.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
