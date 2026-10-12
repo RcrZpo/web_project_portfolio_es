@@ -23,7 +23,7 @@
     url(fonts/OpenSans-SemiBold.woff) format("woff"),
     url(fonts/OpenSans-SemiBold.woff2) format("woff2");
   font-weight: 500;
-  font-style: semi-bold;
+  font-style: normal;
 }
 @font-face {
   font-family: "OpenSans-bold";
@@ -31,7 +31,7 @@
     url(fonts/OpenSans-Bold.woff) format("woff"),
     url(fonts/OpenSans-Bold.woff2) format("woff2");
   font-weight: 700;
-  font-style: bold;
+  font-style: normal;
 }
 @font-face {
   font-family: "Inter-Regular";
@@ -47,7 +47,7 @@
     url(fonts/Inter18pt-Bold.woff) format("woff"),
     url(fonts/Inter18pt-Bold.woff2) format("woff2");
   font-weight: 700;
-  font-style: bold;
+  font-style: normal;
 }
 @font-face {
   font-family: "Inter-medium";
@@ -55,7 +55,7 @@
     url(fonts/Inter18pt-Medium.woff) format("woff"),
     url(fonts/Inter18pt-Medium.woff2) format("woff2");
   font-weight: 500;
-  font-style: medium;
+  font-style: normal;
 }
 @font-face {
   font-family: "Italic-Noto-Serif";
@@ -65,7 +65,9 @@
   font-weight: 400;
   font-style: italic;
 }
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -102,8 +104,11 @@ a {
 ========================= */
 
 .container {
-  width: min(100% - 40px, 960px);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+
+  margin-inline: auto;
+  padding-inline: 20px;
 }
 
 /* =========================
@@ -115,15 +120,18 @@ a {
 
   grid-template-columns:
     minmax(0, 1.2fr)
-    minmax(280px, 0.8fr);
+    minmax(0, 0.8fr);
 
-  gap: clamp(30px, 6vw, 80px);
+  gap: clamp(24px, 4vw, 60px);
 
   align-items: center;
 
   padding: 40px 0 60px;
 }
-
+.hero__info,
+.hero__photo {
+  min-width: 0;
+}
 .hero__info h1 {
   margin: 0 0 15px;
   font-family:
@@ -218,9 +226,7 @@ a {
 
   position: absolute;
 
-  width: 170%;
-  aspect-ratio: 1 / 1;
-
+  width: 80%;
   left: 50%;
   top: 50%;
 
@@ -393,7 +399,7 @@ section h2 {
 ========================= */
 
 .contact {
-  padding: 20px 0 60px;
+  padding: 60px 0;
   font-family: "ArchivoBlack", sans-serif;
   text-align: center;
   position: relative;
@@ -404,8 +410,8 @@ section h2 {
 
   position: absolute;
 
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: min(100%, 600px);
+  height: 300px;
 
   left: 50%;
   top: 50%;
@@ -425,7 +431,7 @@ section h2 {
 }
 
 .contact h2 {
-  margin-bottom: 0 0 15px;
+  margin: 0 0 15px;
   font-size: 28px;
 }
 
@@ -463,14 +469,19 @@ section h2 {
    TABLET
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .hero {
-    grid-template-columns: 1fr 220px;
-    gap: 30px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
   }
 
-  .skills__grid {
-    grid-template-columns: repeat(3, 1fr);
+  .hero__photo {
+    width: min(100%, 340px);
+    order: -1;
+  }
+
+  .hero__photo::before {
+    width: 130%;
   }
 }
 
@@ -480,68 +491,25 @@ section h2 {
 
 @media (max-width: 600px) {
   .container {
-    width: min(100% - 32px, 960px);
+    padding-inline: 16px;
   }
 
   .hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
   }
 
   .hero__photo {
+    width: min(100%, 280px);
     order: -1;
   }
+
   .hero__photo::before {
-    width: 500px;
-    height: 500px;
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background: radial-gradient(
-      ellipse at center,
-      rgba(109, 109, 255, 0.35) 0%,
-      rgba(70, 70, 160, 0.2) 35%,
-      rgba(30, 30, 70, 0.1) 60%,
-      transparent 100%
-    );
-
-    z-index: -1;
-    pointer-events: none;
+    width: 120%;
+    height: auto;
   }
+
   .hero__photo img {
     max-width: 250px;
-  }
-
-  .skills__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .projects__grid {
-    grid-template-columns: 1fr;
-  }
-  .contact::before {
-    content: "";
-
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background: radial-gradient(
-      ellipse at center,
-      rgba(109, 109, 255, 0.35) 0%,
-      rgba(70, 70, 160, 0.2) 35%,
-      rgba(30, 30, 70, 0.1) 60%,
-      transparent 100%
-    );
-
-    z-index: -1;
-    pointer-events: none;
   }
 }
